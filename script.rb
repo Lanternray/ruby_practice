@@ -1,11 +1,9 @@
-def isogram?(string)
-  original_length = string.length
-  string_array = string.downcase.split
+name = "Tom"
 
-  debugger
-
-  unique_length = string_array.uniq.length
-  original_length == unique_length
+if name == "Shane"
+  puts "Hi, #{name}"
+elsif name == "Joe"
+  puts "Bye, #{name}"
+else
+  puts "I don't know you!"
 end
-
-isogram?("Odin")
