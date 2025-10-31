@@ -1,9 +1,7 @@
-name = "Tom"
+my_array = [1,2]
 
-if name == "Shane"
-  puts "Hi, #{name}"
-elsif name == "Joe"
-  puts "Bye, #{name}"
-else
-  puts "I don't know you!"
+my_array.each do |num|
+    num *= 2
+    puts "The new number is #{num}."
 end
+
