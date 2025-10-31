@@ -1,7 +1,4 @@
-my_array = [1,2]
+fruits = ["apple", "banana", "strawberry", "pineapple"]
 
-my_array.each do |num|
-    num *= 2
-    puts "The new number is #{num}."
-end
+p fruits.one? { |fruit| fruit.length > 9 }
 
