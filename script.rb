@@ -1,22 +1,23 @@
 class GoodDog
-    attr_accessor :name, :height, :weight
+  DOG_YEARS = 7
 
-    def initialize(n, h, w)
-        self.name = n
-        self.height = h
-        self.weight = w
-    end
+  attr_accessor :name, :age
 
-    def change_info(n, h, w)
-        self.name = n
-        self.height = h
-        self.weight = w
-    end
+  def initialize(n, a)
+    self.name = n
+    self.age = a
+  end
 
-    def info
-        "#{self.name} weight #{self.weight} and is #{self.height} tall."
-    end
+  def public_disclosure
+    "#{self.name} in human years is #{human_years}"
+  end
+
+  private
+
+  def human_years
+    age * DOG_YEARS
+  end
 end
 
-sparky = GoodDog.new("Sparky", "12 inches", "10 lbs")
-p sparky.what_is_self
+sparky = GoodDog.new("Sparky", 4)
+puts sparky.public_disclosure
