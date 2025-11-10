@@ -1,12 +1,30 @@
-# What is a module? What is its purpose? How do we use them with our classes? Create a module for the class you created in exercise 1 and include it properly.
+class Viking
 
-module Study
-    
+    attr_accessor :name, :age, :health, :strength
+
+    @@starting_health
+
+    def initialize(name, age, health, strength)
+        @name = name
+        @age = age
+        @health = @@starting_health
+        @strength = strength
+    end
+
+    def take_damage(damage)
+        self.health -= damage
+        self.shout("OUCH!")  
+    end
+
+    def shout(str)
+        puts str  
+    end
+
+    def sleep
+        health += 1 unless health >= 99  
+    end
 end
 
-class MyClass
-    include Study
-end
-
-my_object = MyClass.new
-
+oleg = Viking.new("Oleg", 19, 100, 8)
+p oleg.health
+p oleg.take_damage(10)
